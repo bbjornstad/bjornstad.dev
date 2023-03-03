@@ -1,0 +1,55 @@
++++
+title = "KISS Me Maybe"
+description = "How I Learned The Best Way of Doing The Same Steps Repeatedly"
+date=2023-03-01
++++
+
+I've always been of the opinion that the most ideal forms encountered in life
+are the simplest. A lot of my favorite music is devilishly simple, the kind of
+thing that makes you wonder how you didn't come up with such sounds yourself. In
+nature, water follows the path of least resistance, as does electricity, or
+some might say humanity. We cannot forget Occam, whose razor seems to be
+gliding closer to our skin with each passing day, or perhaps that's just what
+becoming older feels like.
+
+Enter Arch Linux. I was a freshman in college, fresh off the back of a
+demoralizing experience trying to get FedEx to reimburse me for their damages to
+my desktop computer they incurred during transit to Evanston. It just so happened that Murphy also decided to rear
+his ugly head that day. A myriad of issues had sprung up with the computer. The sound was completely trashed, there were several driver related errors that cropped up during the debugging phase,
+sporadic boot behavior, graphical glitches...
+
+I had been fed up with Microsoft's lousy attempt at an operating system for
+several years by this point. And I suppose this was the straw that broke the
+camel's back. Enough was enough, if windows didn't want to play
+nice with my hardware, I was in no position to make concessions to microsoft on
+this front. So I dumped them, I left Windows behind and I never looked back. And
+that was one of the best decisions I've ever made.
+
+## Arch Linux
+
+I suppose it was a natural choice, settling on Arch Linux. I had some experience
+with various other linux distributions through jobs in high school or just for
+fun discovery and learning. But, I never really clicked with any of them all
+that well. Linux Mint, nor Ubuntu, nor CentOS really inspired me. Being a bit of
+a control freak, especially when it comes to my technology, the ethos behind the
+Arch Linux project was very appealing. KISS: Keep it Simple, Stupid.
+
+In the wake of my headaches with windows, maybe I placed too much value on this
+fact alone, but it was a decision that I made consciously, realizing the
+alternative value in the ability to access free and open software. If only the
+installation process could be so simple too. 
+
+I think it took me 4 full days before I had my first booting images created.
+That does not include any time to configure user applications, which can also
+eat up large chunks of time. I probably repeated the installation 10x times,
+realizing each time that there was another small value I forgot to set, that I need
+to add boot menu entries, or set particular kernel parameters in order to eek
+out those extra few features that I wanted (not to mention wholesale swaths of
+packages that need to be ported).
+
+It has now been nearly 10 years since my first installation--dubbed Andromeda,
+after the closest galaxy to the Milky Way, and for her role in the legends of
+humans past. In that time I have managed to get my installation time down to
+within a day. Even still, there's always something I forget. I don't think I've
+ever successfully installed Arch Linux on the first try.
+

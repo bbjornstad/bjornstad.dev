@@ -1,0 +1,15 @@
+<footer>
+  <ul>
+    <li><a href="placeholder">"home"</a></li>
+    <li><a href="placeholder">"sitemap"</a></li>
+    <li><a href="placeholder">"about"</a></li>
+    <li><a href="placeholder">"contributions"</a></li>
+    <li><a href="placeholder">"the spacebar"</a></li>
+    <li><a href="placeholder">"dotcandyd"</a></li>
+    <li><a href="placeholder">"github"</a></li>
+  </ul>
+  <span class="attributions2023">
+    <p>Created with Rust, using [Zola Static Site Generator](https://getzola.org)</p>
+    <p>2023, Bailey Bjornstad</p>
+  </span>
+</footer>

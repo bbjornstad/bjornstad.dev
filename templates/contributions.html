@@ -1,0 +1,5 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="contributions-title">{{ page.title }}</h1>
+<h2 class="contributions-desc">{{ page.description }}</h2>
+<hr />
+{{ page.content | safe }} {% endblock content %}
