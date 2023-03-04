@@ -11,7 +11,7 @@ profile = "USB A"
 id_full = "ybkyA(pgp)_master-cert"
 +++
 
-{{ txtinline(file_path="content/pgp/master-cert/pgp_ybkyA-master-cert.pub") }}
+{{ pgpinline(file_path="content/pgp/master-cert/pgp_ybkyA-master-cert.pub") }}
 
 It is unlikely you will need this key unless you have need to verify the
 certifications of one of my other keys. You probably won't even need it then,

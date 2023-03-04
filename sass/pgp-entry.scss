@@ -1,0 +1,15 @@
+/* bjornstad.dev - SCSS for PGP Entry Items
+*  ----------------------------------------
+*  Here we create a space for us to be able to define any thematic constraints
+*  that we desire atop our website's chosen theme (terminimal).
+*  --- */
+
+@mixin sty-pgp-entry {
+	white-space: pre;
+	font-family: monospace;
+}
+
+.pgp-entry {
+	@include sty-pgp-entry;
+}
+

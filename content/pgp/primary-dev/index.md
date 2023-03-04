@@ -4,14 +4,15 @@ description = "Personal PGP Keys | primary-dev"
 date = 2023-12-31
 template = "pgp-entry.html"
 
-[extra.securitykeys]
-id = "primary-dev"
-type = "Yubikey 5 NFC"
-profile = "USB A"
-id_full = "pgp_ybkyA-primary-dev"
+[extra]
+    [extra.securitykeys]
+    id = "primary-dev"
+    type = "Yubikey 5 NFC"
+    profile = "USB A"
+    id_full = "pgp_ybkyA-primary-dev"
 +++
 
-{{ txtinline(file_path="content/pgp/primary-dev/pgp_ybkyA-primary-dev.pub") }}
+{{ pgpinline(file_path="content/pgp/primary-dev/pgp_ybkyA-primary-dev.pub") }}
 
 This is my primary PGP key for development work and general use. If you want to
 encrypt your email to me, this is the one to use. This is also the main PGP key

@@ -1,5 +1,8 @@
-{% extends "base.html" %} {% block content %}
-<h1 class="contributions-title">{{ page.title }}</h1>
-<h2 class="contributions-desc">{{ page.description }}</h2>
-<hr />
-{{ page.content | safe }} {% endblock content %}
+{% extends "index.html" %}
+
+{% block content %}
+<p class="title">{{ section.title }}</p>
+<p class="description">{{ section.description }}</p>
+<hr>
+<p>{{ section.content | safe }}</p>
+{% endblock content %}

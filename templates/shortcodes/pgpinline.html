@@ -1,0 +1,11 @@
+<!-- TODO: this is a test -->
+	<!-- <code>
+		{% set pgp_data = load_data(path=file_path) %}
+		{{ pgp_data }}<code>-->
+	<!--TODO: Somehow we need to get the content of the other file in
+	here as HTML-->
+{% set pgp_data = load_data(path=file_path) %}
+<div class="pgp-entry">
+	<code>{{ pgp_data }}</code>
+	<br>
+</div>

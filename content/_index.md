@@ -1,28 +1,19 @@
 +++
 title = 'bjornstad.dev | Bailey Bjornstad'
+paginate_by = 2
 sort_by = 'date'
-template = 'home.html'
+template = "home.html"
 +++
 
-# hi, I'm Bailey Bjornstad.
+# hi, I'm bailey bjornstad.
 
 You seem to have found your way to my personal website for data engineering for
-business intelligence. This is also home to _the spacebar_, my personal blog
+business intelligence. This is also home to __*the spacebar*__, my personal blog
 related to programming, Linux, math, and the occasional rant.
 
 Welcome, and I hope that you enjoy your stay.
 
-## Quick Links
-
-To Section:
-- [pgp](./pgp)
-- [the spacebar (blog)](./spacebar)
-- [contributions](./contributions_involvements)
-- [kudos](./kudos)
-- [github](https://github.com/bbjornstad)
-- [the rising sines project](https://risingsines.live)
-
-## About
+## about
 
 I am a data and software engineer with a background in mathematics from
 Northwestern University. I harbor a deep love of computers, mathematical
