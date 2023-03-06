@@ -1,8 +1,14 @@
-{% extends "index.html" %} {% block content %}
-<div class="home-splash">
-  <h1 class="home-splash-title">{{ section.title }}</h1>
-</div>
-<div class="post">
-	{{ post_macros::content(page=section, summary=false) }}
+{% extends "index.html" %}
+
+{% import "macros/splash.html" as splash_macros %}
+
+{%- block title -%}
+{{ title_macros::title(page_title=section.title, main_title=config.title) }}
+{%- endblock -%}
+
+
+{% block content %}
+<div class=">st">
+	{{ splash_macros::splash(page=page, summary=false) }}
 </div>
 {% endblock content %}

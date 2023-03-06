@@ -2,6 +2,8 @@
 title = "Uncle Sam Hates Windows"
 description = "My Experience Switching to Linux, and Why You Should Too"
 date = 2023-03-01
+
+tags = ["Linux", "genesis", "open-source", "hardware", "story"]
 +++
 
 _author's note: the above does not represent the legitimate viewpoints of the US
@@ -17,6 +19,8 @@ Yep, that's right folks. You heard it here first. The US Government actually
 **hates** Microsoft Windows, and Uncle Sam wants YOU to switch to Linux. And, for once, it
 seems to be the case that I agree with a decision that the US government has made
 in the past 20 years.
+
+<!----more----->
 
 At one point, early in my college experience, I was running into some trouble
 with Windows on my custom-buit pc. While the machine was old, it was running

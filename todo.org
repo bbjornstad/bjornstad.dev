@@ -1,0 +1,5 @@
+* bjornstad.dev master todo-list
+  The bjornstad.dev website is coming along rather nicely, but we still need to
+  nail down some of the more nuanced bits.
+
+** TODO 

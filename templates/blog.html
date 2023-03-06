@@ -2,35 +2,33 @@
 
 {% import "macros/splash.html" as splash_macros %}
 
-
 {%- block title -%}
 {{ title_macros::title(page_title=section.title, main_title=config.title) }}
 {%- endblock title -%}
 
 
+{% if section.pages %}
 {% block content %}
 <div class="post">
-	<div class="spacebar-splash">
-		<h1 class="spacebar-logoline">{{ section.title }}</h1>
-		{{ splash_macros::header(page=section) }}
-		<br>
-		{{ splash_macros::content(page=section, summary=false) }}
-	</div>
+	{{ splash_macros::splash(page=section) }}
 	<hr>
 	{%- if paginator %}
 		{%- set show_pages = paginator.pages -%}
 	{% else %}
 		{%- set show_pages = section.pages -%}
 	{% endif -%}
-	<div class="spacebar-posts">
+	<div class="blog-posts">
 		{%- for page in show_pages %}
 		<div class = "post on-list">
-			{{ splash_macros::header(page=page, summary=true) }}
+			{{ post_macros::header(page=page) }}
 			<br>
-			{{ splash_macros::content(page=page, summary=true) }}
+			{{ post_macros::content(page=page, summary=true) }}
 		</div>
 		{% endfor %}
 	</div>
 </div>
+
+{{ splash_macros::post_contents(pages=section.pages) }}
 {% endblock content %}
+{% endif %}
 

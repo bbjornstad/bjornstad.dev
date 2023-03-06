@@ -82,7 +82,15 @@ menu_items = [
 	{name = "links", url = "$BASE_URL/links"},
 	{name = "github", url = "https://github.com/bbjornstad", newtab = true}
 ]
+page_titles = "combined"
 
 [extra.profileimg]
 profile_picture = "$BASE_URL/static/bjornstad_profile.jpg"
+
+[extra.spacebar]
+	[extra.spacebar.logoline]
+	logo = "󱁐 The Spacebar 󱁐"
+	separator = "."
+	accent = ""
+
 
