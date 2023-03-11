@@ -1,5 +1,52 @@
+# vim: set ft=org:nofoldenable: #
 * bjornstad.dev master todo-list
   The bjornstad.dev website is coming along rather nicely, but we still need to
-  nail down some of the more nuanced bits.
+  nail down some of the more nuanced bits. Some major considerations to be made
+  at this juncture include the extent to which we would like to let the
+  weirdness show through. Wan Shi Tong might be a bit much :/
 
-** TODO 
+** TODO blog content
+   Main content for the blog section, at least to start.
+   - [ ] Linux Introduction
+   - [ ] VPN Blocking Rant
+   - [ ] Personal Dotfiles explained
+   - [ ] Introduction to `dotcandyd`
+
+
+** TODO layout updates
+   If there are updates that must be made to the layout of the blog, this is
+   where they should be listed. This is mainly to define a section's ability to
+   have content followed by the post-summarization entries as they would be
+   represented in the default theme.
+   - [ ] define `landing.html`
+	 - [ ] simple layout, should not differ much from the page.html from the
+	   theme. Namely, we want the header item (with tags), followed by the page
+	   content from MD, followed by the earlier/later section if that is to be
+	   rendered based on where we are in the site.
+	 - [ ] should not have any definitions for the post summarization
+   - [ ] define `section.html` as extending landing.html from above. The only
+	 difference, is that this version should render the post summarization or
+	 post-list content below the main landing content.
+   - [ ] point all index pages to the right templates
+
+
+** TODO thematic updates
+   While I like the layout of the theme `terminimal`, the color options given by
+   default don't really match my style.
+   - [ ] Kanagawafy
+   - [ ] Decide if this is something that we might be able to do with `dotcandyd`
+   - [ ] Define the taffy files
+
+** TODO Advertise the Website on some smaller platforms.
+   This section could honestly go so many different ways that it is hard to put
+   a finger down on what the specifics of each of these things should be.
+
+** TODO document the development of `dotcandyd`
+   This is just generally an important thing to do for several reasons. For one,
+   this is probably how we can most easily get our family essential credentials
+   on the same page. Personally, I wouldn't want to touch the internet without
+   some level of protection, preferably several levels. Most of all, if some
+   sort of legitimate emergency were to go down, this gives all of us another
+   way of identifying each other and/or making communications in places where
+   others cannot see them.
+

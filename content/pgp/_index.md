@@ -13,6 +13,10 @@ verification purposes, e.g. as a password and 2-factor authentication tool, or f
 signing emails or github commits.
 
 I use Yubikeys for 2-FA whenever possible, and as such there
-are a few different options. [Read more here](url://link-to-place). While you probably
+are a few different options. [Read more here](tags/yubikey). While you probably
 want the first of these options, all are included here for "posterity".
+
+I simply note here that I reserve the right to discontinue the use of some keys,
+either due to security issues or because I want to adjust the configuration of
+my yubikeys.
 

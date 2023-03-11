@@ -2,7 +2,6 @@
 title = 'links'
 description = "Links, Fun Things, and Extra Resources"
 sort_by = 'date'
-template = 'links.html'
 +++
 
 ## Stuff I Use Regularly

@@ -1,0 +1,28 @@
+{% macro splash_header(page) -%}
+    <h1 class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
+    <div class="post-meta-inline">
+        {{ post_macros::tags(page=page) }}
+    </div>
+{% endmacro splash_header %}
+
+
+{% macro block_posts(pages) %}
+	{%- for page in pages %}
+	{%- if page.draft %}
+		{% continue %}
+	{% endif -%}
+	<div class="post-block">
+		<div class="post-block__head"
+		<h2><a href="{{ page.permalink | safe }}">
+			{{ page.title }}
+			</a></h2>
+			<div class="post-block__tags">
+				{{ post_macros::tags(page=page, short=true) }}
+			</div>
+		</div>
+		<div class="post-block__content">
+			{{ page.content | safe }}
+		</div>
+	</div>
+	{% endif -%}
+{% endmacro block_posts %}

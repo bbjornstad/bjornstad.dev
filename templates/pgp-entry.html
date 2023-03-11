@@ -1,5 +1,8 @@
-{% extends "index.html" %} {% block content %}
-<a href="{{ page.extra.securitykeys.id_full }}.pub">Download PUB</a>
-<hr>
-{{ page.content | safe }}
+{% extends "page.html" %}
+{% block content %}
+	<div class="post">
+    <a href="{{ page.extra.securitykeys.id_full }}.pub">Download PUB</a>
+    <hr />
+    {{ page.content | safe }}
+	</div>
 {% endblock content %}

@@ -1,6 +1,4 @@
-[submodule "themes/anatole-zola"]
-	path = themes/anatole-zola
-	url = https://github.com/longfangsong/anatole-zola
-[submodule "themes/terminimal"]
-	path = themes/terminimal
-	url = https://github.com/pawroman/zola-theme-terminimal.git
+
+[submodule "themes/minigawa"]
+	path = themes/minigawa
+	url = https://github.com/bbjornstad/zola-theme-termigawa
