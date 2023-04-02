@@ -4,11 +4,12 @@ description = "Personal PGP Keys | master-cert"
 date = 2023-12-01
 template = "pgp-entry.html"
 
-[extra.securitykeys]
-id = "master-cert"
-type = "Yubikey 5 NFC"
-profile = "USB A"
-id_full = "ybkyA(pgp)_master-cert"
+[extra]
+    [extra.securitykeys]
+    id = "primary-dev"
+    type = "Yubikey 5 NFC"
+    profile = "USB A"
+    id_full = "pgp_ybkyA-master-cert"
 +++
 
 {{ pgpinline(file_path="content/pgp/master-cert/pgp_ybkyA-master-cert.pub") }}

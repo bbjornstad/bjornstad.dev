@@ -1,28 +1,30 @@
-{% macro splash_header(page) -%}
-    <h1 class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
-    <div class="post-meta-inline">
-        {{ post_macros::tags(page=page) }}
-    </div>
-{% endmacro splash_header %}
+{%- import "macros/icon.html" as icon_macros -%}
 
-
-{% macro block_posts(pages) %}
-	{%- for page in pages %}
-	{%- if page.draft %}
-		{% continue %}
-	{% endif -%}
-	<div class="post-block">
-		<div class="post-block__head"
-		<h2><a href="{{ page.permalink | safe }}">
-			{{ page.title }}
-			</a></h2>
-			<div class="post-block__tags">
-				{{ post_macros::tags(page=page, short=true) }}
-			</div>
-		</div>
-		<div class="post-block__content">
-			{{ page.content | safe }}
-		</div>
+{%- macro splash_header(section) -%}
+	<div class="section-head">
+		<h1 class="section-title">
+			<span class="item">
+				{% if section.extra.icons.logo %}
+					{% set logochar =
+					section.extra.icons.logo %}
+				{% else %}
+					{% set logochar = "󰫇" %}
+				{% endif
+				%}
+				{% if section.extra.icons.goto %}
+					{% set gotochar = section.extra.icons.goto %}
+				{% else %}
+					{% set gotochar = "󰁘" %}
+				{% endif %}
+				{{ icon_macros::logo(char=logochar, pad=true) }}
+				<a href="{{ section.permalink | safe }}">{{ section.title }}</a>
+			</span>
+			<span class="leader"></span>
+			<span class="goto">{{ icon_macros::goto(char=gotochar, pad=true) }}</span>
+		</h1>
 	</div>
-	{% endif -%}
-{% endmacro block_posts %}
+{%- endmacro splash_header -%}
+
+{%- macro content(section) -%}
+	<div class="section-content">{{ section.content | safe }}</div>
+{%- endmacro content -%}

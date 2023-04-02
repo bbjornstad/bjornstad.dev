@@ -1,7 +1,10 @@
 +++
-title = 'links'
+title = 'awesome'
 description = "Links, Fun Things, and Extra Resources"
 sort_by = 'date'
+
+template = "section.html"
+page_template = "page.html"
 +++
 
 ## Stuff I Use Regularly
@@ -13,8 +16,6 @@ sort_by = 'date'
 - `gpg` and Yubikeys [homepage](https://yubico.com/products/yubikey-5-overview/)
 
 ## Stuff I Think is Neat
-
-
 
 Microsoft Azure comes with an impressive line of product offerings.
 

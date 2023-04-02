@@ -1,5 +1,5 @@
 +++
-title = "Contributions & Involved Projects"
+title = "contributions & involved projects"
 description = "A short list of projects, companies, and missions that I have helped contribute to"
 date = 2023-03-10
 +++

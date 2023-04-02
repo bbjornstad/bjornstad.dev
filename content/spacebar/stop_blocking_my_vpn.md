@@ -10,6 +10,8 @@ I don't know why I have to say this in the year 2023...I was even a little bit
 optimistic that we might just get to skip this part of our internet progression,
 but alas, no.
 
+<!-- more -->
+
 If you are a company who chooses to block a user's access to your website
 because that user chooses to use extra services such as VPNs, external DNS
 resolvers, or other methods that serve to increase protection when browsing

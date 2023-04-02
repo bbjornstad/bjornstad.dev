@@ -74,12 +74,16 @@ logo_text = "bjornstad.dev "
 
 use_hack_full_font = true
 
+accent_color = "kanagawa"
+
+background_color = "kanagawa"
+
 menu_items = [
 	{name = "about", url = "$BASE_URL"},
 	{name = "the spacebar", url = "$BASE_URL/spacebar"},
 	{name = "pgp", url = "$BASE_URL/pgp"},
 	{name = "contributions", url = "$BASE_URL/contributions"},
-	{name = "links", url = "$BASE_URL/links"},
+	{name = "awesome", url = "$BASE_URL/awesome"},
 	{name = "github", url = "https://github.com/bbjornstad", newtab = true}
 ]
 page_titles = "combined"

@@ -5,11 +5,10 @@
 *  --- */
 
 @mixin sty-pgp-entry {
-	white-space: pre;
-	font-family: monospace;
+  background-color: var(--dark-background-alpha-70);
+  //white-space: pre;
 }
 
-.pgp-content {
-	@include sty-pgp-entry;
+.pgp-content code {
+  @include sty-pgp-entry;
 }
-

@@ -1,0 +1,8 @@
+{%- macro logo(char, pad) %}
+	<span class="icon{% if pad %} left pad-right{% endif %}">{{ char }}</span>
+{%- endmacro logo %}
+
+{%- macro goto(char, pad) -%}
+	<span class="icon{% if pad %} right pad-left{% endif %}">{{ char }}</span>
+{%- endmacro goto %}
+
