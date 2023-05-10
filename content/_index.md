@@ -24,7 +24,7 @@ for all who follow.
 This is my website about data engineering, business intelligence, AI, and
 generally my work as a data management specialist. This is also home to ***[the
 spacebar](spacebar)***, my mostly serious blog related to programming, Linux,
-math, and the occasional rant.
+math, and the occasional directed or undirected rant.
 {% end %}
 
 Welcome. I hope that you enjoy your stay.
