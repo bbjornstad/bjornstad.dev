@@ -19,7 +19,7 @@ insert_anchor_links = "heading"
 
 {% image_homeprofile(path="bjornstad-profile-square.jpg", width=270) %}
 I aim to build tools that foster an era of sustainable humanity and prosperity
-for all who follow.
+for all living beings to follow.
 
 This is my website about data engineering, business intelligence, AI, and
 generally my work as a data management specialist. This is also home to ***[the

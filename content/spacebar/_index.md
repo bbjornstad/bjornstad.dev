@@ -12,6 +12,5 @@ page_template = "page.html"
     goto = "󱅥"
 +++
 
-*A personal blog revolving around data engineering, software development, Linux,
-math, and many musings about this weird wide world (tm), plus the people in it.*
-
+_A personal blog revolving around data engineering, software development, Linux,
+math and musings about this weird wide world , plus the people in it._

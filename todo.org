@@ -12,7 +12,6 @@
    - [ ] Personal Dotfiles explained
    - [ ] Introduction to `dotcandyd`
 
-
 ** TODO layout updates
    If there are updates that must be made to the layout of the blog, this is
    where they should be listed. This is mainly to define a section's ability to
