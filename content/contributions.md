@@ -43,7 +43,13 @@ date = 2023-05-01
 ## Rising Sines
 
 *   DJing and multimedia entertainment project.
-*   What started as a simple late-night radio show on Northwestern's very own WNUR 89.3 FM has grown into a full-fledged multimedia entertainment project. The eventual goal is to have an online space that allows free sharing of multimedia content, especially around music or other forms of artistic expression. This would include a platform for supporting creators in a manner of ways (crypto tokens being the easiest/most straightforward top implement) while not tying this support to access to the multimedia.
+*   What started as a simple late-night radio show on Northwestern's very own
+    WNUR 89.3 FM has grown into a full-fledged multimedia entertainment project.
+    The eventual goal is to have an online space that allows free sharing of
+    multimedia content, especially around music or other forms of artistic
+    expression. This would include a platform for supporting creators in a
+    manner of ways (crypto tokens being the easiest/most straightforward top
+    implement) while not tying this support to access to the multimedia.
 *   Website launching soon at [risingsines.live](https://risingsines.live).
 
 ## Other Open-Source Contributions

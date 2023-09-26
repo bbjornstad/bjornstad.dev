@@ -19,5 +19,26 @@ must be completed in order to get to a completed state.
 ## My Mission
 
 **I will design software which is elegant, user-centric, modular-by-default,
-and serves a purpose, with the aim of creating tools which  usher in a
-new era of sustainable human living**
+and serves a clear purpose, with the aim of creating tools which usher in a new
+era of sustainable human living** Above all, every individual on planet earth
+deserves a chance to lead a life that is as free from the pains, struggles, and
+wastefulness of our living as we have found ourselves today---in as sustainable
+a fashion as we can.
+
+## Purpose of the Mission
+The mission above seeks to provide a key point of guidance, especially in
+situations where the decision-making is intense, energy-consuming, and tiring.
+It provides a way of resolving which way to go when you've reached a fork in the
+road. It provides a method to understanding whether I am going to be more or
+less likely to succeed in future roles. And, it provides a method of first
+thinking-twice, then doing once, something that has occasionally proven
+difficult for me.
+
+As such, by clearly delineating the purpose of the mission, we hope to hold
+ourselves more accountable to the intentions here, for despite what some people
+may think, intentions do, in-fact, matter.
+
+## The Mission: In Practice
+All of this so far is a bit theoretical. In practice, I want this manifest to
+serve my development as a programmer and critical thinker in the following ways:
+- ( ) stuff

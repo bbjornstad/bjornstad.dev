@@ -9,5 +9,6 @@ date = 2023-03-07
 - bailey@bjornstad.dev
 - baileybjornstad@fastmail.com
 
-please remember to import my [pgp keys](pgp) if you plan to use it.
+Please remember to import my [pgp keys](pgp) if you plan to use them (preferred if
+you already use PGP, say for code signing or encryption).
 
