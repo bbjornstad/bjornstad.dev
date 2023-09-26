@@ -1,15 +1,15 @@
 +++
-title = "󱁐 the spacebar"
-description = "Musings and Oddball Thoughts about Software Development, Data Engineering, and Humanity"
+title = " NixOS "
+description = "musings about Nix and NixOS---the functional package manager"
 sort_by = "date"
 
 template = "section.html"
 page_template = "page.html"
 
 [extra]
-  [extra.icons]
-  logo = "󰫇"
-  goto = "󱅥"
+[extra.icons]
+logo = "󰫇"
+goto = "󱅥"
 +++
 
 *A personal blog revolving around data engineering, software development, Linux,

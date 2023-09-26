@@ -43,6 +43,3 @@ anti-consumer, it's annoying as hell, and frankly, you all, as
 the providers of the services and ultimately their profiteers, should be more
 than capable of figuring out a workable solution without needing to ask any
 users for such a transgressive policy change.
-
-
-
