@@ -2,7 +2,7 @@
 base_url = "https://bjornstad.dev"
 # title and description
 title = 'bjornstad.dev'
-description = 'The Spacebar, Linux, and the Occasional Rant'
+description = 'The Spacebar, Data, Linux, and the Occasional Rant'
 
 # The default language; used in feeds.
 default_language = "en"
@@ -26,12 +26,12 @@ minify_html = false # A list of glob patterns specifying asset files to ignore w
 ignored_content = []
 
 # When set to "true", a feed is automatically generated.
-generate_feed = true
+generate_feeds = true
 
 # The filename to use for the feed. Used as the template filename, too.
 # Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
 # There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
-feed_filename = "atom.xml"
+feed_filenames = ["rss.xml"]
 
 # The number of articles to include in the feed. All items are included if
 # this limit is not set (the default).
@@ -44,16 +44,10 @@ feed_filename = "atom.xml"
 hard_link_static = false
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
-# Example:
-#     taxonomies = [
-#       {name = "tags", feed = true}, # each tag will have its own feed
-#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
-#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
-#       {name = "authors"}, # Basic definition: no feed or pagination
-#     ]
-#
 taxonomies = [
-	{name = "tags", feed = true},
+  { name = "tags", feed = true },
+  { name = "esa", feed = true },
+  { name = "audience", feed = false },
 ]
 
 # When set to "true", a search index is built from the pages and section
@@ -68,33 +62,34 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+menu_items = [
+  { name = "home", url = "$BASE_URL" },
+  { name = "manifest", url = "$BASE_URL/manifest" },
+  { name = "the spacebar", url = "$BASE_URL/spacebar" },
+  { name = "pgp", url = "$BASE_URL/pgp" },
+  { name = "contributions", url = "$BASE_URL/contributions" },
+  { name = "garden of awesome", url = "$BASE_URL/awesome" },
+  { name = "contact", url = "$BASE_URL/contact" },
+  { name = "github", url = "https://github.com/bbjornstad", newtab = true },
+  { name = "tags", url = "$BASE_URL/tags", newtab=true},
+]
 author = 'Bailey Bjornstad'
 contact = 'bailey@bjornstad.dev'
-logo_text = "bjornstad.dev "
-
 use_hack_full_font = true
-
 accent_color = "kanagawa"
-
 background_color = "kanagawa"
-
-menu_items = [
-	{name = "about", url = "$BASE_URL"},
-	{name = "the spacebar", url = "$BASE_URL/spacebar"},
-	{name = "pgp", url = "$BASE_URL/pgp"},
-	{name = "contributions", url = "$BASE_URL/contributions"},
-	{name = "awesome", url = "$BASE_URL/awesome"},
-	{name = "github", url = "https://github.com/bbjornstad", newtab = true}
-]
 page_titles = "combined"
+
+[extra.logo]
+text = "bjornstad.dev"
+preimg = "owl"
+postimg = "code"
 
 [extra.profileimg]
 profile_picture = "$BASE_URL/static/bjornstad_profile.jpg"
 
 [extra.spacebar]
-	[extra.spacebar.logoline]
-	logo = "󱁐 The Spacebar 󱁐"
-	separator = "."
-	accent = ""
-
-
+[extra.spacebar.logo]
+logo = "󱁐 The Spacebar 󱁐"
+separator = "."
+accent = ""
