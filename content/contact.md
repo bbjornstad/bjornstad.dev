@@ -1,14 +1,12 @@
 +++
-title = "contact me"
-description = "Bailey Bjornstad's contact information"
-date = 2023-03-07
+title = "contact"
+description = "How to Reach Me"
 +++
 
 ## email
 
-- bailey@bjornstad.dev
-- baileybjornstad@fastmail.com
+- [bailey (at) bjornstad.dev](mailto://bailey@bjornstad.dev)
+- [baileybjornstad (at) bjornstad.dev](mailto://baileybjornstad@fastmail.com)
 
-Please remember to import my [pgp keys](pgp) if you plan to use them (preferred if
-you already use PGP, say for code signing or encryption).
-
+Please remember to import my [pgp keys](pgp) if you plan to use them (preferred
+if you already use PGP, say for code signing or encryption).

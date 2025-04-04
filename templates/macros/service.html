@@ -1,0 +1,27 @@
+{# vim: set ft=html.jinja syntax=on: #}
+{%- import "macros/icon.html" as icon_macros -%}
+{%- macro splash_header(svcsection) -%}
+<div class="svcsection-head">
+  <h1 class="svcsection-title">
+    <span class="item">
+      {% if svcsection.extra.icons.logo %}
+      {% set logochar = svcsection.extra.icons.logo %}
+      {% else %}
+      {% set logochar = "󰫇" %}
+      {% endif %}
+      {% if svcsection.extra.icons.goto %}
+      {% set gotochar = svcsection.extra.icons.goto %}
+      {% else %}
+      {% set gotochar = "󰁘" %}
+      {% endif %}
+      {{ icon_macros::logo(char=logochar, pad=true) }}
+      <a href="{{ svcsection.permalink | safe }}">{{ svcsection.title }}</a>
+    </span>
+    <span class="leader"></span>
+    <span class="goto">{{ icon_macros::goto(char=gotochar, pad=true) }}</span>
+  </h1>
+</div>
+{%- endmacro splash_header -%}
+{%- macro content(svcsection) -%}
+<div class="svcsection-content">{{ svcsection.content | safe }}</div>
+{%- endmacro content -%}

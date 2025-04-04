@@ -1,0 +1,61 @@
+@mixin section-heading-fonts {
+  font-family: "Alegreya SC";
+  font-weight: "bold";
+}
+
+.section {
+  & h2 {
+    @include section-heading-fonts;
+    font-size: 2.2rem;
+  }
+
+  & h3 {
+    @include section-heading-fonts;
+    font-size: 1.8rem;
+  }
+
+  & h1 {
+    line-height: 1;
+  }
+}
+
+@mixin post-heading-fonts {
+  font-family: "Alegreya SC";
+  font-weight: "bold";
+}
+
+@mixin post-title-fonts {
+  font-family: "Andada Pro";
+  font-weight: "bold";
+}
+
+.content {
+  & .post {
+    & > .post-title {
+      @include post-title-fonts;
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+      padding-bottom: 4px;
+    }
+    & h2 {
+      @include post-heading-fonts;
+    }
+    & h3 {
+      @include post-heading-fonts;
+    }
+  }
+  & .content-items {
+    & > .posts {
+      & > .post {
+        & > .post-title {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+code {
+  font-family: Fira Code;
+}

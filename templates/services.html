@@ -1,0 +1,12 @@
+{# vim: set ft=html.jinja syntax=on: #}
+{% extends "index.html" %}
+{% import "macros/service.html" as svc_macros %}
+{% block content %}
+<div class="single-column">
+  <div class="service-section">
+    {{ svc_macros::splash_header(svcsection=section) }}
+    {{ svc_macros::content(svcsection=section) }}
+  </div>
+</div>
+{% endblock content %}
+<div class="content-items", sitesection="services">{{ super() }}</div>

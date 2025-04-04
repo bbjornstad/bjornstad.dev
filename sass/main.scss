@@ -1,236 +1,35 @@
-// vim: set ft=scss tabstop=2: //
+@import "lib";
 @import "variables";
-@import "font-fira";
+@import "fonts-main";
+@import "fonts-mono";
+@import "fonts-icon";
 
-$contain-width: 1024px;
-
-@mixin sty-description-box {
-  font-size: 16;
-  font-style: oblique;
-  font-weight: bold;
-}
-
-.description {
-  @include sty-description-box;
-}
-
-@mixin sty-single-column {
-  column-count: 1;
-}
-
-.single-column {
-  @include sty-single-column;
-}
-
-.wrapimage-left {
-  float: left;
-}
-
-.wrapimage-right {
-  float: right;
-}
-
-@mixin sty-dual-column {
-  display: inline-block;
-}
-
-.two-column {
-  @include sty-dual-column;
-}
-
-@mixin sty-floatleft {
-  float: left;
-}
-
-.floatleft {
-  @include sty-floatleft;
-}
-
-.wrapimage img {
-  margin-right: 24px;
-  margin-bottom: 24px;
-}
-
-.wrapimage p {
-  overflow: hidden;
-  //float: none;
-}
-
-.post-title {
-  --border: 2px dashed var(--accent-alpha-40);
-}
-
-@function repeat($character, $n) {
-  $c: "";
-  @for $i from 1 through $n {
-    $c: $c + $character;
-  }
-  @return $c;
-}
-
-.section {
-  width: 50vw;
-  max-width: 100%;
-  min-width: 60%;
-  text-align: left;
-  margin: 20px auto;
-  padding: 20px 0;
-
-  @media (max-width: $tablet-max-width) {
-    max-width: 660px;
-  }
-
-  &:not(:last-of-type) {
-    border-bottom: 1px solid var(--accent-alpha-40);
-  }
-
-  %meta {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: var(--accent-alpha-70);
-  }
-
-  &-meta {
-    @extend %meta;
-  }
-
-  &-meta-inline {
-    @extend %meta;
-
-    display: inline;
-  }
-
-  &-title {
-    --border: 16px double var(--accent-alpha-40);
-    position: relative;
-    color: var(--accent);
-    margin: 0 0;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    border-bottom: var(--border);
-    border-top: var(--border);
-    border-width: 6px;
-    font-weight: 400;
-    font-size: 1.8em;
-    width: 100%;
-    display: flex;
-
-    a {
-      text-decoration: none;
-    }
-
-    & .item,
-    & .goto {
-      flex: 1 0 auto;
-    }
-    & .leader {
-      flex: 0 1 auto;
-      overflow: hidden;
-      &::before {
-        display: inline-block;
-        //white-space: no-wrap;
-        overflow: hidden;
-        text-overflow: clip;
-        height: 1em;
-        content: repeat(".", 48);
-        color: var(--varaccent-alpha-90);
-      }
-    }
-    & .goto {
-      padding-left: 1em;
-      padding-right: 0.4em;
-    }
-
-    & .item {
-      padding-right: 0.2em;
-    }
-  }
-
-  %tags {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    opacity: 0.5;
-  }
-
-  &-tags {
-    @extend %tags;
-
-    display: block;
-  }
-
-  &-tags-inline {
-    @extend %tags;
-
-    display: inline;
-
-    @media (max-width: $phone-max-width) {
-      display: block;
-    }
-  }
-
-  &-content {
-    margin-top: 30px;
-  }
-
-  &-cover {
-    border: 20px solid var(--accent);
-    background: transparent;
-    margin: 40px 0;
-    padding: 20px;
-
-    @media (max-width: $phone-max-width) {
-      padding: 10px;
-      border-width: 10px;
-    }
-  }
-
-  ul {
-    list-style: none;
-
-    li:before {
-      content: "►";
-      position: absolute;
-      left: -20px;
-      color: var(--accent);
-    }
-  }
-}
-
-.pad {
-  &-right {
-    padding-right: 1em; // calc(2.71828em / 3.14159265);
-  }
-
-  &-left {
-    //margin-left: 0.1em; // calc(2.71828em / 3.14159265);
-  }
-}
-
-.right {
-  text-align: right;
-  float: right;
-  &.icon {
-    margin-left: auto;
-  }
-}
-.left {
-  text-align: left;
-  float: left;
-
-  &.icon {
-    margin-right: none;
-  }
-}
-
-.icon {
-  color: var(--varaccent);
-}
-
-.container {
-  max-width: $contain-width;
-}
+@import "hierarchy";
+@import "page";
+@import "layout";
 
 body {
-  font-family: Fira Code, Hack, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono,
+  font-family:
+    Andada Pro,
+    Castoro,
+    Lusitana,
+    Piazzolla,
+    Mate,
+    Tienne,
+    Arbutus Slab,
+    Vesper Libre,
+    Maitree,
+    Grenze,
+    Gentium Book Plus,
+    Manuale,
+    Poly,
+    Platypi,
+    Rasa,
+    Faculty Glyphic,
+    Galdeano,
+    Bitter,
+    Fira Code,
+    Hack,
     monospace;
+  font-size: 1.25rem;
 }

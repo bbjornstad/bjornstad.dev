@@ -5,11 +5,11 @@ date = 2023-12-01
 template = "pgp-entry.html"
 
 [extra]
-    [extra.securitykeys]
-    id = "primary-dev"
-    type = "Yubikey 5 NFC"
-    profile = "USB A"
-    id_full = "pgp_ybkyA-master-cert"
+[extra.securitykeys]
+id = "primary-dev"
+type = "Yubikey 5 NFC"
+profile = "USB A"
+id_full = "pgp_ybkyA-master-cert"
 +++
 
 {{ pgpinline(file_path="content/pgp/master-cert/pgp_ybkyA-master-cert.pub") }}
@@ -22,4 +22,3 @@ intermediate keys if needed.
 This set of keys was generated directly on the Yubikey, attached to a machine
 with **no networking enabled**. Maintenance is performed as needed, attached to
 a machine with **no networking enabled**
-
