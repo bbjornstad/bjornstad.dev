@@ -1,3 +1,4 @@
-[submodule "themes/anatole-zola"]
-	path = themes/anatole-zola
-	url = https://github.com/longfangsong/anatole-zola
+
+[submodule "themes/minigawa"]
+	path = themes/minigawa
+	url = https://github.com/bbjornstad/zola-theme-termigawa

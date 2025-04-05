@@ -1,0 +1,24 @@
+{# vim: set ft=html.jinja syntax=on: #}
+<div class="single-column">
+  <p>{{ body }}</p>
+</div>
+{% if bandcamp %}
+<iframe style="border: 0;
+width: 100%;
+height: 120px;"
+            src="{{ bandcamp }}"
+            seamless>
+  <a href="https://skepticalmusic.bandcamp.com/album/exitlp018-skeptical-enjoy-this-trip-lp">EXITLP018 - Skeptical - &#39;Enjoy This Trip&#39; LP by Skeptical
+  </a>
+</iframe>
+{% elif spotify %}
+<iframe style="border-radius: 4px;"
+            src="{{ spotify }}"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+{% else %}
+{% endif %}

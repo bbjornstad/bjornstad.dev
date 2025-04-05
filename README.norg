@@ -1,0 +1,25 @@
+@document.meta
+title: README
+description:
+authors: Bailey Bjornstad | ursa-major
+categories:
+created: 2023-08-24
+updated: 2023-08-24
+version: 1.1.1
+@end
+
+
+* bjornstad.dev: math, analytics, and data engineering
+  This repository contains the content and HTML for my personal webpage, located
+  at bjornstad.dev. Contained within are any blog posts, written as Markdown
+  documents and rendered as a static webpage through Zola, a website generator
+  written in Rust, in the same flavor as Hugo, for example.White
+
+** _The Spacebar_: personal blog
+   The Spacebar is my own personal blog devoted to mathematics, data analytics,
+   software engineering, and general musings about this weird wide world, plus
+   the people in it.
+
+   ---
+* Table of Contents:
+** The Spacebar:

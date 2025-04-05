@@ -1,0 +1,91 @@
+/* fallback */
+@font-face {
+  font-family: "Material Symbols Sharp";
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v228/gNMVW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4aWE.woff2)
+    format("woff2");
+}
+
+%material-symbols-sharp {
+  font-family: "Material Symbols Sharp";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  vertical-align: text-bottom;
+  padding-bottom: 0.01em;
+  -moz-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin iconify($fontsize: 1em, $fontweight: 300) {
+  @extend %material-symbols-sharp;
+  font-size: #{$fontsize};
+  font-weight: #{$fontweight};
+
+  font-variation-settings:
+    "FILL" 0,
+    "wght" #{$fontweight},
+    "GRAD" 0,
+    "opsz" #{$fontsize};
+
+  @content;
+}
+
+.iconified {
+  @include iconify(var(--icon-fontsize), var(--icon-fontweight));
+}
+
+.icon {
+  &-* ::first-letter {
+    margin-left: 10px;
+    margin-right: 20px;
+
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  &-* ::view-transition-new {
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  &-light {
+    &-small {
+      @include iconify(24px, 300);
+    }
+    &-medium {
+      @include iconify(40px, 300);
+    }
+    &-large {
+      @include iconify(56px, 300);
+    }
+  }
+  &-medium {
+    &-small {
+      @include iconify(24px, 500);
+    }
+    &-medium {
+      @include iconify(40px, 500);
+    }
+    &-large {
+      @include iconify(56px, 500);
+    }
+  }
+  &-heavy {
+    &-small {
+      @include iconify(24px, 500);
+    }
+    &-medium {
+      @include iconify(40px, 500);
+    }
+    &-large {
+      @include iconify(56px, 500);
+    }
+  }
+}

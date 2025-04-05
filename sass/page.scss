@@ -1,0 +1,253 @@
+@use "layout.scss" as l;
+@import "variables";
+
+// +-------------------------------------------------------+ // section items ++
+.section {
+  max-width: 100%;
+  min-width: 100%;
+  text-align: left;
+  margin: 20px auto;
+  padding: 20px 0;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--accent-alpha-40);
+  }
+
+  %meta {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--accent-alpha-70);
+  }
+
+  &-meta {
+    @extend %meta;
+  }
+
+  &-meta-inline {
+    @extend %meta;
+  }
+
+  &-title {
+    --border: 12px double var(--accent-alpha-40);
+    position: relative;
+    color: var(--accent);
+    background: var(--accent-alpha-10);
+    margin: 0 0;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: var(--border);
+    border-top: var(--border);
+    border-width: 4px;
+    font-weight: 600;
+    font-size: 3rem;
+    width: 100%;
+    display: flex;
+    vertical-align: bottom;
+
+    a {
+      text-decoration: none;
+    }
+
+    & .item,
+    & .goto {
+      flex: 1 0 auto;
+    }
+
+    & .leader {
+      flex: 0 1 auto;
+      overflow: hidden;
+
+      &::before {
+        display: inline-block;
+        //white-space: no-wrap;
+        overflow: hidden;
+        text-overflow: ".";
+        height: 1em;
+        color: var(--varaccent-alpha-90);
+      }
+    }
+  }
+
+  %tags {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+
+  &-tags {
+    @extend %tags;
+
+    display: block;
+  }
+
+  &-tags-inline {
+    @extend %tags;
+
+    display: inline;
+
+    @media (max-width: $phone-max-width) {
+      display: block;
+    }
+  }
+
+  &-content {
+    margin-top: 30px;
+  }
+
+  &-cover {
+    border: 20px solid var(--accent);
+    background: transparent;
+    margin: 40px 0;
+    padding: 20px;
+
+    @media (max-width: $phone-max-width) {
+      padding: 10px;
+      border-width: 10px;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+// +-----------------------------------------------------------+ header items ++
+.header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: inline-flex;
+    flex: 5px 5px;
+
+    &:after {
+      content: "";
+      background: repeating-linear-gradient(90deg,
+          var(--accent),
+          var(--accent) 2px,
+          transparent 0,
+          transparent 16px);
+      // display: block;
+      width: 100%;
+      right: 10px;
+    }
+
+    a {
+      flex: 0 0 auto;
+      // max-width: 100%;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  font-size: 2rem;
+
+  &__inner {
+    width: 100%;
+  }
+
+  .copyright {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .copyright-theme {
+    text-align: right;
+    float: right;
+  }
+}
+
+.post {
+  container-type: inline-size;
+
+  @include l.contain-on-oneline(10%, 90%) {
+    .post-title {
+      font-size: clamp(1em, 1em + 0.005cqi, 1.4em);
+    }
+  }
+
+  &-meta-inline {
+    text-align: right;
+    float: right;
+  }
+
+  &-content {
+    &>h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+    }
+  }
+}
+
+.container {
+  container-type: inline-size;
+  max-width: $contain-width;
+}
+
+.breadcrumb-list {
+  list-style: none;
+  float: right;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  width: 100%;
+  background: var(--accent-alpha-20);
+  line-height: 1.4em;
+  margin: 0;
+}
+
+ul.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  max-width: 100%;
+  border-bottom: 1.5px dashed var(--accent-alpha-30);
+  border-top: 1.5px dashed var(--accent-alpha-30);
+}
+
+/* Display list items side by side */
+ul.breadcrumb-list li {
+  display: inline;
+}
+
+.breadcrumb-list .is-active {
+  background: var(--accent-alpha-30);
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+.breadcrumb-list li:not(:last-child)::after {
+  @extend %material-symbols-sharp;
+  display: inline-block;
+  padding: 0 0.5rem;
+  content: "\f46a";
+}
+
+.breadcrumb-list.is-active ::after {
+  // @extend %material-symbols-sharp;
+  font-family: Alegreya SC;
+  display: inline-block;
+  padding: 0 0.25rem;
+  content: "\21a3";
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb-list li a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  color: var(--alt-foreground);
+  font-weight: 700;
+}

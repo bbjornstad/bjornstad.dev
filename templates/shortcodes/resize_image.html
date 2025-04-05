@@ -1,0 +1,3 @@
+{# vim: set ft=html.jinja syntax=on: #}
+{% set image = resize_image(path=path, width=width, height=height, quality=100) %}
+<img src="{{ image.url }}">
