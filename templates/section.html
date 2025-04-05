@@ -8,7 +8,9 @@
 <div class="section single-column">
   <div class="section--content">
     {{ sect_macros::splash_header(section=section) }}
-    {{ sect_macros::content(section=section) }}
+    {{ sect_macros::content(section=section,
+    show_only_description=page.extra.show_only_description |
+    default(value=false)) }}
   </div>
   <div class="section--content-items">{{ super() }}</div>
 </div>
