@@ -1,0 +1,170 @@
+/*
+ ╓───────────────────────────────────────────────────────────────────────╖
+ ║                                                          layout tools ║
+ ╙───────────────────────────────────────────────────────────────────────╜
+  A collection of useful mixins and class definitions to improve layout
+  abilities.
+*/
+
+@mixin sty-description-box {
+  font-size: 16;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.description {
+  @include sty-description-box;
+}
+
+@mixin sty-single-column {
+  column-count: 1;
+}
+
+.single-column {
+  @include sty-single-column;
+}
+
+.wrapimage-left {
+  float: left;
+}
+
+.wrapimage-right {
+  float: right;
+}
+
+@mixin sty-dual-column {
+  display: inline-block;
+}
+
+.two-column {
+  @include sty-dual-column;
+}
+
+@mixin sty-floatleft {
+  float: left;
+}
+
+.floatleft {
+  @include sty-floatleft;
+}
+
+.wrapimage img {
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.wrapimage p {
+  overflow: hidden;
+  //float: none;
+}
+
+.post-title {
+  --border: 2px dashed var(--varaccent-alpha-20);
+  font-weight: bold;
+}
+
+.pad {
+  &-right {
+    padding-right: 1em; // calc(2.71828em / 3.14159265);
+  }
+
+  &-left {
+    margin-left: 0.1em; // calc(2.71828em / 3.14159265);
+  }
+}
+
+.right {
+  text-align: right;
+  float: right;
+
+  &.icon {
+    margin-left: auto;
+  }
+}
+
+.left {
+  text-align: left;
+  float: left;
+
+  &.icon {
+    margin-right: none;
+  }
+}
+
+/* bjornstad.dev - SCSS for PGP Entry Items
+*  ----------------------------------------
+*  Here we create a space for us to be able to define any thematic constraints
+*  that we desire atop our website's chosen theme (terminimal).
+*  --- */
+
+@mixin sty-pgp-entry {
+  background-color: var(--dark-background-alpha-70);
+  //white-space: pre;
+}
+
+.pgp-content code {
+  @include sty-pgp-entry;
+}
+
+/* bjornstad.dev - Container Queries
+*  ---------------------------------
+*  here we are setting up some specific classses that can be used to lock
+*  behaviors down to certain container properties
+*/
+.with-width-container {
+  container-name: contain-by-width;
+  container-type: inline-size;
+}
+
+.with-height-container {
+  container-name: contain-by-height;
+  container-type: size;
+}
+
+.with-oneline-container {
+  container-name: contain-oneline;
+  container-type: inline-size;
+}
+
+$breakpoint-minwidth: 320px;
+$breakpoint-phone: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-fullwidth: 1260px;
+$pxrange-breakpoints: calc(#{$breakpoint-fullwidth} - #{$breakpoint-minwidth});
+
+@mixin respond-at-fullwidth {
+  @container contain-by-width (max-width: #{breakpoint-minwidth}) {
+    @content;
+  }
+  @container contain-by-width (min-width: #{$breakpoint-minwidth}) and (max-width: #{breakpoint-phone}) {
+    @content;
+  }
+  @container contain-by-width (min-width: #{$breakpoint-phone}) and (max-width: #{breakpoint-tablet}) {
+    @content;
+  }
+  @container contain-by-width (min-width: #{$breakpoint-tablet}) and (max-width: #{breakpoint-desktop}) {
+    @content;
+  }
+  @container contain-by-width (min-width: #{$breakpoint-desktop}) and (max-width: #{breakpoint-fullwidth}) {
+    @content;
+  }
+  @container contain-by-width (min-width: #{$breakpoint-fullwidth}) {
+    @content;
+  }
+}
+
+@mixin contain-on-oneline($outerbound, $innerbound: 0rem, $name: none) {
+  @container #{$name} (min-width: #{$innerbound}) and (max-width: #{$outerbound}) {
+    @content;
+  }
+}
+
+.post {
+  container-type: inline-size;
+  @include contain-on-oneline(10%, 90%, "with-width-container") {
+    .post-title {
+      font-size: clamp(1em, 1em + 0.005cqi, 1.4em);
+    }
+  }
+}

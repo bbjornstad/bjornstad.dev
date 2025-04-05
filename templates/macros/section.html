@@ -1,30 +1,33 @@
+{# vim: set ft=html.jinja syntax=on: #}
 {%- import "macros/icon.html" as icon_macros -%}
-
 {%- macro splash_header(section) -%}
-	<div class="section-head">
-		<h1 class="section-title">
-			<span class="item">
-				{% if section.extra.icons.logo %}
-					{% set logochar =
-					section.extra.icons.logo %}
-				{% else %}
-					{% set logochar = "󰫇" %}
-				{% endif
-				%}
-				{% if section.extra.icons.goto %}
-					{% set gotochar = section.extra.icons.goto %}
-				{% else %}
-					{% set gotochar = "󰁘" %}
-				{% endif %}
-				{{ icon_macros::logo(char=logochar, pad=true) }}
-				<a href="{{ section.permalink | safe }}">{{ section.title }}</a>
-			</span>
-			<span class="leader"></span>
-			<span class="goto">{{ icon_macros::goto(char=gotochar, pad=true) }}</span>
-		</h1>
-	</div>
+<div class="section-head">
+  <h1 class="section-title">
+    <span class="item">
+      {% if section.extra.icons.page %}
+      {% set pagechar = section.extra.icons.page %}
+      {% else %}
+      {% set pagechar = "terminal" %}
+      {% endif %}
+      {% set page_icon = icon_macros::iconify(char=pagechar, weight=300, size=56,  unit='px') %}
+      {% if section.extra.icons.next %}
+      {% set next_icon = icon_macros::iconify(char=section.extra.icons.next, weight=500, size=56, unit='px') %}
+      {% endif %}
+      {% if section.extra.icons.previous %}
+      {% set previous_icon =
+      icon_macros::iconify(char=section.extra.icons.previous, weight=500, size=56, unit='px') %}
+      {% endif %}
+      {% if previous_icon %}
+      <span class="button previous page left">{{ previous_icon | safe }}</span>
+      {% endif %}
+      <a href="{{ section.permalink | safe }}">{{ page_icon | safe }} {{ section.title }}</a>
+      {% if next_icon %}
+      <span class="button next page right">{{ next_icon | safe }}</span>
+      {% endif %}
+    </span>
+  </h1>
+</div>
 {%- endmacro splash_header -%}
-
 {%- macro content(section) -%}
-	<div class="section-content">{{ section.content | safe }}</div>
+<div class="section-content">{{ section.content | safe }}</div>
 {%- endmacro content -%}

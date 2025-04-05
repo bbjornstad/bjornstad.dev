@@ -1,12 +1,12 @@
+{# vim: set ft=html.jinja syntax=on: #}
 {% if width %}
-	{% set image = resize_image(path=path, width=width, height=width, op="fill", quality=100) %}
+{% set image = resize_image(path=path, width=width, height=width, op="fill", quality=100) %}
 {% else %}
-	{% set image = resize_image(path=path, width=480, height=480, op="fill", quality=100) %}
+{% set image = resize_image(path=path, width=480, height=480, op="fill", quality=100) %}
 {% endif %}
-
 <div class="wrapimage">
-	<img class="floatleft", src="{{ image.url }}"{% if alt %}, alt="{{ alt }}"{% endif %}/>
-	{{ body | markdown | safe }}
+  <img class="floatleft"
+         src="{{ image.url }}"
+         {% if alt %}, alt="{{ alt }}"{% endif %} />
+  {{ body | markdown | safe }}
 </div>
-
-

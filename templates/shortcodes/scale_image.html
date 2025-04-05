@@ -1,0 +1,7 @@
+{# vim: set ft=html.jinja syntax=on: #}
+{% set image_path = page.colocated_path ~ name %}
+{% set image_meta = get_image_metadata(path=image_path) %}
+{% set image_scale_width = (image_meta.width) * scale | int %}
+{% set image_scale_height = (image_meta.height) * scale | int %}
+{% set image = resize_image(path=image_path, width=image_scale_width, height=image_scale_height, op="fill", quality=100) %}
+<img src="{{ image.url }}">

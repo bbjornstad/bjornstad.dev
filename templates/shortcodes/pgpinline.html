@@ -1,5 +1,6 @@
+{# vim: set ft=html.jinja syntax=on: #}
 {% set pgp_data = load_data(path=file_path) %}
 <div class="pgp-content">
-	<code>{{ pgp_data | linebreaksbr | safe }}</code>
-	<br/>
+  <code>{{ pgp_data | linebreaksbr | safe }}</code>
+  <br />
 </div>

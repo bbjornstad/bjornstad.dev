@@ -1,0 +1,11 @@
+{# vim: set ft=html.jinja syntax=on: #}
+{% extends "index.html" %}
+{% import "macros/section.html" as sect_macros %}
+{% block content %}
+<div class="single-column">
+  <div class="section">
+    {{ sect_macros::splash_header(section=section) }}
+  </div>
+  <div class="content-items", sitesection="awesome">{{ super() }}</div>
+</div>
+{% endblock content %}

@@ -8,32 +8,59 @@ tags = ["Linux", "nightowl.nvim"]
 
 [ <!-- TODO --> ]:: # add hyperlinks
 
-*Written in Memory of Bram Moolenaar, a soul most of us sadly never knew, but
-whose dedication has touched all who come across Vim. May he rest in peace*
+_Written in Memory of Bram Moolenaar, a soul most of us sadly never knew, but
+whose dedication has touched all who come across Vim. May he rest in peace_
 
 ---
 
 The almighty Neovim...a worthy opponent, feared by many for the treacherous
 journey that awaits those sorry souls who seek to "close the program". Its
 revered status is almost dragon-like, or rather more like a hydra, which is a
-fitting, given that one of the more popular plugins that exists in historical
-record for the text editor is
+fitting moniker, given that one of the more popular plugins that exists in
+historical record for the text editor is
 [hydra.nvim](https://github.com/anuvyklack/hydra.nvim)
 
 <!-- more -->
 
 Many people think that Neovim is not worth spending so much effort configuring
-when there are more convenient options available (Visual Studio Code is a solid
+when there are more convenient options available. Visual Studio Code is a solid
 editor and more efficiently configurable---especially for someone who is not
 already somewhat familiar with (Neo)vim, and therefore the proper usage
-patterns). In most cases, this is the sensible opinion to have about the matter.
-But, I am not the most sensible in my sensibilities, no no.
+patterns, while the JetBrains family of IDEs have a cultish following.
+Alternatively, other new editors are designed and implemented using more
+sensible patterns, alternative languages, and optimizations that make the
+end-user experience better, see [Helix](https://helix-editor.com).
+
+While I hold Neovim quite close to heart, and do believe that it has provided me
+an enormous boost in productivity, it has done so after extensive learning about
+keymaps and to a lesser extent, tweaking custom configurations. I have been
+using Vim/Neovim directly for nearly 6 years and have been exposed to the
+bindings for the better part of 10, and still only consider myself a novice,
+leaning on the intermediate side. The further reality is that most
+of the benefits in productive throughput are the result of modal editing and the
+specific vim-style keybindings. In most editors, both of these are typically
+available through a single plugin, bridging the gap for users
+who probably don't have the time or patience to configure every last section of
+the editor's behavior (read: people whose time is actually worth something).
+
+To me, it seems as though vim-derivatives are well suited to a selection of
+different, somewhat unorthodox circumstances that occasionally rear their heads
+during text editing. On the one hand, nearly every last parameter of the
+behavior is available for configuration; this affords near limitless power, or
+at least limitless in the sense of the least-common-divisor between one's Lua
+abilities and one's physical hardware. Hence, considering especially that one's
+brain (and therefore Lua abilities) are more malleable than we originally
+thought as a species, it seems as though Neovim could perform strongly in
+situations where the physical hardware capabilities are either extremely capped,
+limited, or otherwise unadjustable by the user, or in cases where the physical
+hardware capabilities are totally uncapped (relatively speaking).
 
 Another reasonable section of the population of potential developers who might
 be using Neovim is those who want to achieve a degree of minimalism in their
 configurations that is not achievable with other editors, or by eking out the
-best performance in comparison. Like I said, not the most sensible about my
-sensibilities...
+best performance in comparison. All of that is well and good, of course; in
+fact most would say it is the correct approach entirely and vim wasn't designed
+with my use considerations in mind.
 
 The typical way in which most people would choose to set up their editors is by
 slowly but methodically including plugins that serve particular workflow
@@ -45,12 +72,14 @@ was to the spaghetti, not my computer).
 To be clear, this is not the most effective or efficient way of setting up the
 editor. Choosing the more standard path described instead of the approach that
 you are about to read more about is generally a better choice. But in case you
-find yourself somewhere closer to my camp, this is the first article in a series
-on learning *How to Make Neovim Do Anything*.
+find yourself somewhere closer to my camp, or are simply just curious, please
+remember to keep checking back here for the latest on learning _How to Make
+Neovim Do Anything_.
 
 ---
 
-## ***How to Make Neovim Do Anything***: Part 1/?
+## **_How to Make Neovim Do Anything_**: Part 1/?
+
 If you are anything like me you know the struggle of learning about the
 expansive plugin ecosystems for Unix software: there's always another plugin to
 try, another delectable cream-puff of a behavioral modification or shortcut
@@ -73,9 +102,8 @@ you are looking to include (naturally). Luckily, it does seem as though there
 are replacement implementations in lua for many of the commonly used vimscript
 plugins.
 
-
-
 ### LazyVim, lazy.nvim, and kickstart.nvim
+
 Because of the aforementioned bent towards lua-specific implementations for
 performance gains, it would make the most sense to choose a package
 management system and initial framework which is implemented specifically for
@@ -136,15 +164,16 @@ might be useful.
 ---
 
 ## LazyVim Installation
-LazyVim is conveniently packaged up as both a neovim plugin as well as a
-repository starter template. The latter handles setting up the initial
-configuration without already having a plugin manager installed, while the
-former handles keeping the base system up-to-date and in-sync with the upstream
-source. LazyVim is accessible on [GitHub](https://github.com/LazyVim/LazyVim),
-as is the [starter template](https://github.com/LazyVim/starter) which was used
-to create nightowl.nvim. Alternatively, this is all accessible through the
-[project website](https://lazyvim.org), which naturally is also the home of
-documentation for LazyVim.
+
+LazyVim is conveniently packaged up as both a neovim plugin and a repository
+starter template. The latter handles setting up the initial configuration
+without already having a plugin manager installed, while the former handles
+keeping the base system up-to-date and in-sync with the upstream source. LazyVim
+is accessible on [GitHub](https://github.com/LazyVim/LazyVim), as is the
+[starter template](https://github.com/LazyVim/starter) which was used to create
+nightowl.nvim. Alternatively, this is all accessible through the [project
+website](https://lazyvim.org), which naturally is also the home of documentation
+for LazyVim.
 
 After cloning the starter template to my local machine at the neovim
 configuration home location (default `$XDG_CONFIG_HOME/nvim` ~
@@ -153,5 +182,6 @@ else to do except begin with the specifications for the plugins that I
 wanted to include in this configuration.
 
 ## LazyVim Configuration: Quirks, Notes, and Specifications
+
 LazyVim is a clean, straightforward, and relatively flexible base
 implementation.
